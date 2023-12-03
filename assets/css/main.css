@@ -508,7 +508,7 @@ section {
 .hero {
   width: 100%;
   min-height: 100vh;
-  /*background: url("https://res.cloudinary.com/ddjdhrevz/video/upload/v1699125942/Untitled_design_1_j1q6op.mp4") top center;*/
+  background: url("https://res.cloudinary.com/ddjdhrevz/video/upload/v1699125942/Untitled_design_1_j1q6op.mp4") top center;
   background-size: cover;
   position: relative;
   padding: 120px 0;
