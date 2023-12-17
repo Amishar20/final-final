@@ -273,57 +273,79 @@
     </section><!-- End Call To Action Section -->
 
     <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-            <h3>Sponsors <br></h3>
-    
-            <div class="row gy-4">
-              <div class="col-md-6">
-                <div class="icon-list d-flex">
-                  <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635861/Screenshot_2023-11-10_at_10.29.41_PM_dvf3x8.png" alt="Your Photo" style="width: 180px; height: 180px; object-fit: cover;">
-                  <span></span>
-                </div>
-              </div>
-              <!-- End Icon List Item-->
-    
-              <div class="col-md-6">
-                <div class="icon-list d-flex">
-                  <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635861/Screenshot_2023-11-10_at_10.30.24_PM_c1iayd.png" alt="Your Photo" style="width: 280px; height: 180px; object-fit: cover;">
-                  <span></span>
-                </div>
-              </div>
-              <!-- End Icon List Item-->
-    
-              <div class="col-md-6">
-                <div class="icon-list d-flex">
-                  <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635862/Screenshot_2023-11-10_at_10.30.06_PM_shb8gh.png" alt="Your Photo" style="width: 380px; height: 180px; object-fit: cover;">
-                  <span></span>
-                </div>
-              </div>
-              <!-- End Icon List Item-->
-            </div>
-          </div>
+<section id="features" class="features">
+  <div class="container" data-aos="fade-up">
+    <!-- Desktop View: Display 3 photos in a row -->
+    <div class="d-none d-lg-block">
+      <h3 class="text-center mt-4">Sponsors</h3>
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635861/Screenshot_2023-11-10_at_10.29.41_PM_dvf3x8.png" alt="Your Photo" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+          <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635861/Screenshot_2023-11-10_at_10.30.24_PM_c1iayd.png" alt="Your Photo" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+          <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635862/Screenshot_2023-11-10_at_10.30.06_PM_shb8gh.png" alt="Your Photo" class="img-fluid">
         </div>
       </div>
-    </section>
-    
+    </div>
 
-      <!--<div class="details">
-        <div class="container" data-aos="fade-up" data-aos-delay="300">
-          <div class="row">
-            <div class="col-md-6">
-              <h4>Labore Sdio Lidui<br>Bonde Naruto</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nostrum molestias doloremque quae delectus odit minima corrupti blanditiis quo animi!</p>
-              <a href="#about" class="btn-get-started">Get Started</a>
-            </div>
+    <!-- Mobile View: Display photos as a slider -->
+    <div class="d-lg-none">
+      <h3 class="text-center mt-4">Sponsors</h3>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635861/Screenshot_2023-11-10_at_10.29.41_PM_dvf3x8.png" alt="Your Photo" class="img-fluid">
           </div>
-
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635861/Screenshot_2023-11-10_at_10.30.24_PM_c1iayd.png" alt="Your Photo" class="img-fluid">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635862/Screenshot_2023-11-10_at_10.30.06_PM_shb8gh.png" alt="Your Photo" class="img-fluid">
+          </div>
         </div>
+        <!-- Add Navigation --
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>-->
       </div>
+    </div>
+  </div>
+</section>
 
-    </section><!-- End Features Section -->
+<script type="module">
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2000, // milliseconds between slides
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+<!-- Media Queries -->
+<style>
+  /* Tablet View */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .d-lg-none {
+      display: none !important;
+    }
+  }
+
+  /* Mobile View */
+  @media (max-width: 767.98px) {
+    .d-none {
+      display: none !important;
+    }
+  }
+</style>
 
     <!-- ======= Recent Blog Posts Section ======= -->
     <section id="recent-posts" class="recent-posts">
