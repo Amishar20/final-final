@@ -974,12 +974,11 @@ section {
 .team .team-member .member-img {
   position: relative;
   overflow: hidden;
-  width: 200px;                 
-  height: 200px;               
-  object-fit: cover;            
-  border-radius: 50%;           
+  width: 200px;                 /* Set your desired width */
+  height: 200px;                /* Set your desired height */
+  object-fit: cover;            /* Maintain aspect ratio and cover the container */
+  border-radius: 50%;           /* Optional: Add a border-radius for rounded images */
 }
-
 .team .team-member .social {
   position: absolute;
   left: 0;
