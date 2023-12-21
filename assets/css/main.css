@@ -892,6 +892,26 @@ section {
 /*--------------------------------------------------------------
 # Recent Blog Posts Section
 --------------------------------------------------------------*/
+.recent-posts {
+  position: relative;
+  background: url('https://res.cloudinary.com/ddjdhrevz/image/upload/v1703139725/go-karting_track_dw4o5i.jpg') center/cover no-repeat;
+  padding: 80px 0; /* Adjust the padding as needed */
+}
+
+.recent-posts::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(27, 47, 69, 0.8), rgba(27, 47, 69, 0.8)); /* Adjust the opacity and color as needed */
+}
+
+.recent-posts .container {
+  position: relative;
+  z-index: 1;
+}
 .recent-posts .post-box {
   transition: 0.3s;
   height: 100%;
@@ -899,6 +919,9 @@ section {
   position: relative;
   display: flex;
   flex-direction: column;
+  background: rgba(255, 255, 255, 0.9); /* Adjust the opacity and color as needed for individual post boxes */
+  padding: 20px; /* Adjust the padding as needed for individual post boxes */
+  border-radius: 8px; /* Add rounded corners if desired for individual post boxes */
 }
 
 .recent-posts .post-box .post-img {
@@ -961,6 +984,26 @@ section {
 
 .recent-posts .post-box:hover .post-img img {
   transform: scale(1.1);
+}
+.recent-posts .section-header h2 {
+  color: #e4e4e4; /* Replace with your desired color for desktop */
+}
+@media (max-width: 991.98px) {
+  /* Adjust the color for smaller screens if needed */
+  .recent-posts .section-header h2 {
+    color: #000000; /* Replace with your desired color for smaller screens */
+  }
+}
+/* Hide background photo on smaller screens (phones) */
+@media (max-width: 767.98px) {
+  .recent-posts {
+    background: none;
+    padding: 40px 0; /* Adjust padding for mobile devices */
+  }
+
+  .recent-posts::before {
+    display: none; /* Hide the gradient overlay as well */
+  }
 }
 
 /*--------------------------------------------------------------
