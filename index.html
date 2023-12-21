@@ -267,79 +267,85 @@
     </section><!-- End Call To Action Section -->
 
     <!-- ======= Features Section ======= -->
-<section id="features" class="features">
-  <div class="container" data-aos="fade-up">
-    <!-- Desktop View: Display 3 photos in a row -->
-    <div class="d-none d-lg-block">
-      <h3 class="text-center mt-4">Sponsors</h3>
-      <div class="row gy-4">
-        <div class="col-md-4">
-          <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635861/Screenshot_2023-11-10_at_10.29.41_PM_dvf3x8.png" alt="Your Photo" class="img-fluid">
+    <section id="features" class="features">
+      <div class="container" data-aos="fade-up">
+        <!-- Desktop View: Display photos in a slider -->
+        <div class="d-none d-lg-block">
+          <h3 class="text-center mt-4">Sponsors</h3>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Add more photos as needed -->
+              <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635861/Screenshot_2023-11-10_at_10.29.41_PM_dvf3x8.png" alt="Your Photo" class="img-fluid">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1703138334/Screenshot_2023-12-21_at_11.27.52_AM_ubm7aa.png" alt="Your Photo" class="img-fluid">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1703138334/Screenshot_2023-12-21_at_11.28.34_AM_tlkvrz.png" alt="Your Photo" class="img-fluid">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1703138334/Screenshot_2023-12-21_at_11.25.20_AM_ibnptx.png" alt="Your Photo" class="img-fluid">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635862/Screenshot_2023-11-10_at_10.30.06_PM_shb8gh.png" alt="Your Photo" class="img-fluid">
+              </div>
+
+              <!-- Add more photos here -->
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-          <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635861/Screenshot_2023-11-10_at_10.30.24_PM_c1iayd.png" alt="Your Photo" class="img-fluid">
-        </div>
-        <div class="col-md-4">
-          <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635862/Screenshot_2023-11-10_at_10.30.06_PM_shb8gh.png" alt="Your Photo" class="img-fluid">
+    
+        <!-- Mobile View: Display photos as a slider -->
+        <div class="d-lg-none">
+          <h3 class="text-center mt-4">Sponsors</h3>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635861/Screenshot_2023-11-10_at_10.29.41_PM_dvf3x8.png" alt="Your Photo" class="img-fluid">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1703138334/Screenshot_2023-12-21_at_11.27.52_AM_ubm7aa.png" alt="Your Photo" class="img-fluid">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1703138334/Screenshot_2023-12-21_at_11.28.34_AM_tlkvrz.png" alt="Your Photo" class="img-fluid">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1703138334/Screenshot_2023-12-21_at_11.25.20_AM_ibnptx.png" alt="Your Photo" class="img-fluid">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635862/Screenshot_2023-11-10_at_10.30.06_PM_shb8gh.png" alt="Your Photo" class="img-fluid">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Mobile View: Display photos as a slider -->
-    <div class="d-lg-none">
-      <h3 class="text-center mt-4">Sponsors</h3>
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635861/Screenshot_2023-11-10_at_10.29.41_PM_dvf3x8.png" alt="Your Photo" class="img-fluid">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635861/Screenshot_2023-11-10_at_10.30.24_PM_c1iayd.png" alt="Your Photo" class="img-fluid">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699635862/Screenshot_2023-11-10_at_10.30.06_PM_shb8gh.png" alt="Your Photo" class="img-fluid">
-          </div>
-        </div>
-        <!-- Add Navigation --
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>-->
-      </div>
-    </div>
-  </div>
-</section>
-
-<script type="module">
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-      delay: 2000, // milliseconds between slides
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-</script>
-
-<!-- Media Queries -->
-<style>
-  /* Tablet View */
-  @media (min-width: 768px) and (max-width: 991.98px) {
-    .d-lg-none {
-      display: none !important;
-    }
-  }
-
-  /* Mobile View */
-  @media (max-width: 767.98px) {
-    .d-none {
-      display: none !important;
-    }
-  }
-</style>
+    </section>
+    
+    <script type="module">
+      var swiperDesktop = new Swiper('.d-lg-block .swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 500, // milliseconds between slides
+          disableOnInteraction: false,
+        },
+      });
+    
+      var swiperMobile = new Swiper('.d-lg-none .swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 500, // milliseconds between slides
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+    
+    <!-- Swiper Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <!-- ======= Recent Blog Posts Section ======= -->
     <section id="recent-posts" class="recent-posts">
