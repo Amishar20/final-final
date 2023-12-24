@@ -805,89 +805,39 @@ section {
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
-.features {
-  padding-bottom: 0;
+.features h2 {
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
-
-.features h3 {
-  color: var(--color-secondary);
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-.features .icon-list i {
-  margin-right: 10px;
-  font-size: 24px;
-  line-height: 1.2;
-}
-
-.features .icon-list span {
-  font-size: 18px;
-  color: #29486a;
-}
-
 .features .phone-wrap {
   position: absolute;
   right: 0;
+}
+
+.features .phone-wrap img {
+  width: auto; /* Ensure images maintain their aspect ratio */
+  height: 340px; /* Set your desired height for the images */
+}
+
+@media (max-width: 992px) {
+  .features .phone-wrap img {
+    height: auto; /* Allow images to resize proportionally on smaller screens */
+    max-width: 100%; /* Ensure images don't overflow their container */
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 768px) {
   .features .phone-wrap {
     position: relative;
   }
-}
 
-.features .phone-wrap img {
-  width: 340px;
-}
-
-@media (max-width: 992px) {
   .features .phone-wrap img {
-    margin-top: 30px;
+    width: 100%; /* Make images fill the width of their container on smaller screens */
+    height: auto;
   }
 }
 
-@media (max-width: 768px) {
-  .features .phone-wrap img {
-    width: 100%;
-  }
-}
-
-.features .details {
-  margin-top: 80px;
-  padding: 120px 0;
-  background-color: #f7f9fc;
-}
-
-.features .details h4 {
-  color: var(--color-secondary);
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.features .details p {
-  margin-bottom: 20px;
-  font-size: 15px;
-}
-
-.features .details .btn-get-started {
-  font-family: var(--font-primary);
-  display: inline-block;
-  font-weight: 500;
-  font-size: 15px;
-  letter-spacing: 1px;
-  padding: 10px 32px;
-  border-radius: 50px;
-  transition: 0.5s;
-  background-color: var(--color-primary);
-  color: #fff;
-}
-
-.features .details .btn-get-started:hover {
-  background: #2aa5df;
-}
 
 /*--------------------------------------------------------------
 # Recent Blog Posts Section
