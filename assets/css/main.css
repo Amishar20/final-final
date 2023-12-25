@@ -15,25 +15,73 @@
 :root {
   scroll-behavior: smooth;
 }
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #008080 50%, #00000030 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
 
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
   font-family: var(--font-default);
   color: var(--color-default);
+  background-color:  #374a6c !important;
 }
 
 a {
   color: var(--color-primary);
   text-decoration: none;
   transition: 0.3s;
+  
 }
 
 a:hover {
   color: #82cbed;
   text-decoration: none;
 }
+
 
 h1,
 h2,
@@ -43,7 +91,10 @@ h5,
 h6 {
   font-family: var(--font-primary);
 }
-
+h1 {
+  font-family: 'Your Attractive Font', sans-serif;
+  /* Add fallback fonts in case the primary font is not available */
+}
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
@@ -745,16 +796,17 @@ section {
 }
 
 .services-list .service-item .title a {
-  color: var(--color-secondary);
+  color: #fff;
 }
 
 .services-list .service-item .title a:hover {
-  color: #38618e;
+  color: #04fff7;
 }
 
 .services-list .service-item .description {
   line-height: 24px;
   font-size: 14px;
+  color:#ffffff;
 }
 
 /*--------------------------------------------------------------
@@ -844,7 +896,7 @@ section {
 --------------------------------------------------------------*/
 .recent-posts {
   position: relative;
-  background: url('https://res.cloudinary.com/ddjdhrevz/image/upload/v1703139725/go-karting_track_dw4o5i.jpg') center/cover no-repeat;
+  background: url('') center/cover no-repeat;
   padding: 80px 0; /* Adjust the padding as needed */
 }
 
@@ -958,7 +1010,8 @@ section {
 
 /*--------------------------------------------------------------
 # Team Section
---------------------------------------------------------------*/
+/* Add this CSS for the Team Member Section */
+/* Add this CSS for the Team Member Section */
 /* Add this CSS for the Team Member Section */
 .team .team-member {
   overflow: hidden;
@@ -1020,22 +1073,37 @@ section {
   }
 }
 
+
 /*--------------------------------------------------------------
 # Services Cards Section
---------------------------------------------------------------*/
 .services-cards {
-  background: #f7f9fc;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Remove the background gradient on larger screens */
+.services-cards::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* The rest of your existing Services Cards Section CSS */
 
 .services-cards .card-item {
   border: 1px solid rgba(27, 47, 69, 0.1);
-  background: #fff;
+  background: #e6e3e39c;
   position: relative;
   border-radius: 0;
+  height: 340px;  /* Adjust the height as needed */
 }
 
 .services-cards .card-item .card-bg {
-  min-height: 300px;
+  min-height: 300px; /* This ensures the image takes the full height of the card */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1055,6 +1123,30 @@ section {
   color: var(--color-secondary);
   margin: 0;
 }
+
+/* Media query for smaller screens (adjust the max-width as needed) */
+@media only screen and (max-width: 768px) {
+  /* Remove the background gradient on smaller screens */
+  .services-cards::before {
+    display: none;
+  }
+
+  /* Adjust styles for smaller screens */
+  .services-cards .card-item {
+    height: auto; /* Allow the height to adjust based on content */
+  }
+
+  .services-cards .card-item h4 {
+    font-size: 18px; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Adjust the margin as needed */
+  }
+
+  .services-cards .card-item p {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Testimonials Section
@@ -1161,7 +1253,7 @@ section {
   --s: 15px;  /* size of the frame */
   --b: 2px;   /* border thickness */
   --w: 400px; /* width of the image */
-  --c: #7B3B3B;
+  --c: #fff;
 
   width: var(--w);
   aspect-ratio: 1;
@@ -1183,6 +1275,8 @@ section {
   --_i: calc(100% - 2*var(--s));
 }
 
+
+
 .portfolio .portfolio-item .portfolio-info {
   opacity: 0;
   position: absolute;
@@ -1198,9 +1292,11 @@ section {
 .portfolio .portfolio-item .portfolio-info h4 {
   font-size: 18px;
   font-weight: 600;
-  color: var(--color-default);
+  color: #fff;
   padding-right: 50px;
 }
+s
+
 
 .portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
@@ -1226,7 +1322,7 @@ section {
 }
 
 .portfolio .portfolio-flters li {
-  color: var(--color-secondary);
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   padding: 0;
@@ -1282,7 +1378,7 @@ section {
 }
 
 .portfolio .portfolio-item .portfolio-info p {
-  color: #6c757d;
+  color: #fff;
   font-size: 14px;
   margin-bottom: 0;
   padding-right: 50px;
@@ -1354,12 +1450,14 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #d6e2ef;
+  color:#fff;
 }
 
 .portfolio-details .portfolio-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
+  color:#fff;
 }
 
 .portfolio-details .portfolio-info ul li+li {
@@ -1374,13 +1472,20 @@ section {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: var(--color-secondary);
+  color: #141414;
 }
 
 .portfolio-details .portfolio-description p {
   padding: 0;
+  transition: 0.3s;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.663); /* Adjust the opacity and color as needed */
+  padding: 20px; /* Adjust the padding as needed */
+  border-radius: 8px; /* Add rounded corners if desired */
 }
-
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
@@ -2244,7 +2349,7 @@ header h1 {
 }
 
 .footer .footer-content {
-  background-color: #f7f9fc;
+  background-color: #1b2f45;
   background-size: contain;
   padding: 60px 0 30px 0;
 }
@@ -2303,13 +2408,14 @@ header h1 {
 .footer .footer-content h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #29486a;
+  color: #f5f7fa;
   position: relative;
   padding-bottom: 12px;
 }
 
 .footer .footer-content .footer-links {
   margin-bottom: 30px;
+ 
 }
 
 .footer .footer-content .footer-links ul {
@@ -2336,7 +2442,7 @@ header h1 {
 }
 
 .footer .footer-content .footer-links ul a {
-  color: #31547c;
+  color: #fff;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -2348,17 +2454,17 @@ header h1 {
 
 .footer .footer-content .footer-contact p {
   line-height: 26px;
-  color: var(--color-secondary);
+  color: #fff;
 }
 
 .footer .footer-legal {
-  background: #fff;
+  background: #1b2f45;
   padding: 30px 0;
 }
 
 .footer .footer-legal .copyright {
   text-align: center;
-  color: var(--color-secondary);
+  color: #fff;
 }
 
 .footer .footer-legal .credits {
