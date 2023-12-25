@@ -2373,7 +2373,7 @@ header h1 {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: var(--color-secondary);
+  color: #fff;
   font-family: var(--font-secondary);
   margin-top: 3px;
 }
@@ -2382,7 +2382,7 @@ header h1 {
   font-size: 15px;
   margin-bottom: 0;
   font-family: var(--font-primary);
-  color: var(--color-secondary);
+  color: #fff;
 }
 
 .footer .footer-content .social-links a {
