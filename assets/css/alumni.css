@@ -5,120 +5,141 @@ body {
     background-color:  #374a6c !important;
   }
   
-  .slider-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .swiper-container {
-    width: 80%;
-    margin: 20px auto;
-  }
-  
-  .year-heading {
-    color: #fff;
-    font-size: 30px; /* Year heading color */
-  }
-  
-  header {
-    color: white;
-    text-align: center;
-    padding: 35px;
-  }
-  
-  header h1 {
-    font-size: 28px;
-    margin: 0;
-  }
-  
-  .swiper-slide {
-    position: relative;
-    /*width: 33.33%; /* Display three slides at a time */
-  }
-  
-  .swiper-slide img {
-    max-width: 100%;
-    max-height: 300px;
-    width: auto;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #56b8e6; /* White border for square background */
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+.slider-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.swiper-container {
+  width: 80%;
+  height: 300px; /* Adjust the height based on your preference */
+  margin: 20px auto;
+}
+
+.year-heading {
+  color: #fff;
+  font-size: 30px; /* Year heading color */
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(14, 116, 200, 0.959)
+}
+/* Add a section divider using ::after pseudo-element */
+.section::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 20px; /* Adjust the height of the divider */
+  background-color: #56b8e6; /* Choose a color for the divider */
+  margin-top: 20px; /* Adjust the top margin to create space between sections */
+  margin-bottom: 20px; /* Adjust the bottom margin to create space between sections */
+}
+
+
+header {
+  color: white;
+  text-align: center;
+  padding: 35px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.swiper-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+.swiper-slide:hover img {
+  transform: scale(1.1); /* Increase the scale on hover */
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(86, 184, 230, 0.9); /* Adjust the background color and opacity */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s, background 0.3s; /* Add transition for background color change */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle box shadow for depth */
+  border-radius: 50%; /* Ensure the overlay has a circular shape */
+}
+
+.overlay p {
+  margin: 5px 0;
+}
+
+.swiper-slide:hover .overlay {
+  opacity: 1;
+  background: rgba(83, 85, 85, 0.135); /* Adjust the background color on hover */
+}
+
+.swiper-slide .overlay .sub-name {
+  display: none;
+}
+
+.swiper-slide:hover .overlay .sub-name {
+  display: block;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sub-name {
+  font-size: 16px;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .swiper-container,
+  .swiper-slide,
+  .header {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    color: #56b8e6;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-    border-radius: 50%;
   }
-  
-  .overlay p {
-    margin: 5px 0;
+
+  .header {
+    padding: 20px; /* Adjust header padding for smaller screens */
   }
-  
-  .swiper-slide:hover .overlay {
-    opacity: 1;
+
+  .overlay {
+    border-radius: 0; /* Remove border-radius for overlay on smaller screens */
   }
-  
-  .swiper-slide .overlay .sub-name {
-    display: none;
+
+  .swiper-slide img {
+    border-radius: 0; /* Remove border-radius for images on smaller screens */
   }
-  
-  .swiper-slide:hover .overlay .sub-name {
-    display: block;
+
+  .year-heading {
+    font-size: 24px; /* Adjust year heading font size for smaller screens */
   }
-  
-  .name {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .sub-name {
-    font-size: 16px;
-  }
+
   .swiper-button-next,
   .swiper-button-prev {
-    display: none;
+    display: none; /* Hide the next and previous buttons on smaller screens */
   }
-  
-  /* Media Queries for responsiveness */
-  @media screen and (max-width: 768px) {
-    .swiper-container,
-    .swiper-slide,
-    .header {
-      width: 100%;
-    }
-  
-    .header {
-      padding: 20px; /* Adjust header padding for smaller screens */
-    }
-  
-    .overlay {
-      border-radius: 0; /* Remove border-radius for overlay on smaller screens */
-    }
-  
-    .swiper-slide img {
-      border-radius: 0; /* Remove border-radius for images on smaller screens */
-    }
-  
-    .year-heading {
-      font-size: 24px; /* Adjust year heading font size for smaller screens */
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: none; /* Hide the next and previous buttons on smaller screens */
-    }
-  
-    /* Add any additional styles for smaller screens as needed */
-  }
+
+  /* Add any additional styles for smaller screens as needed */
+}
