@@ -232,24 +232,34 @@ section {
   inset: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #fff;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.6s ease-out;
 }
 
 #preloader:before {
   content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid var(--color-primary);
-  border-top-color: #fff;
+  border: 8px solid #00fff9; /* Increased border thickness */
+  border-top-color: #000;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1s linear infinite;
+  width: 180px; /* Slightly smaller width */
+  height: 180px; /* Slightly smaller height */
+  animation: animate-preloader 2s linear infinite, rotate-loader 2s linear infinite;
 }
 
 @keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-loader {
   0% {
     transform: rotate(0deg);
   }
@@ -267,6 +277,7 @@ section {
     transition-delay: 0 !important;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Header
