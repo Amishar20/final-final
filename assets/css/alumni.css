@@ -257,6 +257,6 @@ img {
       padding: 15px; /* Adjust padding for spacing */
       margin-left: 0; /* Remove left margin */
       transform: translateY(0); /* Remove translateY for immediate visibility */
-      transition: none; /* Remove transition effect */
+      transition: none !important; /* Remove transition effect */
   }
 }
