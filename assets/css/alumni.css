@@ -256,7 +256,6 @@ img {
       height: auto; /* Allow height to adjust based on content */
       padding: 15px; /* Adjust padding for spacing */
       margin-left: 0; /* Remove left margin */
-      transform: translateY(0); /* Remove translateY for immediate visibility */
-      transition: none !important; /* Remove transition effect */
+    
   }
 }
