@@ -1,145 +1,262 @@
+/**********************************/
+/********** General CSS ***********/
+/**********************************/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #374a6c !important;
+    font-family: 'Lato', sans-serif;
+    color: #454545;
+    font-weight: 400;
+    background: #ffffff;
 }
 
-.slider-container {
-  text-align: center;
-  padding: 20px;
+a {
+    color: #333333;
+    font-weight: 400;
+    outline: none;
+    text-decoration: none;
+    transition: 0.5s;
 }
 
-.swiper-container {
-  width: 80%;
-  height: 300px; /* Adjust the height based on your preference */
-  margin: 20px auto;
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    text-decoration: none;
 }
 
-.year-heading {
-  color: #fff;
-  font-size: 30px; /* Year heading color */
-  font-weight: bold;
-  text-shadow: 0 0 10px rgba(14, 116, 200, 0.959)
-}
-/* Add a section divider using ::after pseudo-element */
-.section::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 20px; /* Adjust the height of the divider */
-  background-color: #56b8e6; /* Choose a color for the divider */
-  margin-top: 20px; /* Adjust the top margin to create space between sections */
-  margin-bottom: 20px; /* Adjust the bottom margin to create space between sections */
+p {
+    padding: 0;
+    margin: 0 0 15px 0;
+    color: #454545;
+    font-weight: 400;
 }
 
-
-header {
-  color: white;
-  text-align: center;
-  padding: 35px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0 0 15px 0;
+    color: #333333;
+    font-weight: 700;
+    
 }
 
-header h1 {
-  font-size: 28px;
-  margin: 0;
+h1 {
+    font-weight: 900;
 }
 
-.swiper-slide {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide img {
-  width: auto;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0 auto;
-  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
-}
-.swiper-slide:hover img {
-  transform: scale(1.1); /* Increase the scale on hover */
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(86, 184, 230, 0.9); /* Adjust the background color and opacity */
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s, background 0.3s; /* Add transition for background color change */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle box shadow for depth */
-  border-radius: 50%; /* Ensure the overlay has a circular shape */
-}
-
-.overlay p {
-  margin: 5px 0;
-}
-
-.swiper-slide:hover .overlay {
-  opacity: 1;
-  background: rgba(83, 85, 85, 0.135); /* Adjust the background color on hover */
-}
-
-.swiper-slide .overlay .sub-name {
-  display: none;
-}
-
-.swiper-slide:hover .overlay .sub-name {
-  display: block;
-}
-
-.name {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.sub-name {
-  font-size: 16px;
+img {
+    width: 250px !important; /* Adjust the size to your desired value */
+    height: 250px !important; /* Adjust the size to your desired value */
+    object-fit: cover !important; /* Maintain aspect ratio and cover the container */
+    margin-bottom: 30px; /* Adjust the margin-bottom to your desired spacing */
+    margin-left: 70px; 
 }
 
 
-.swiper-button-next,
-.swiper-button-prev {
-  display: none;
-}
 
-/* Media Queries for responsiveness */
-@media screen and (max-width: 768px) {
-  .swiper-container,
-  .swiper-slide,
-  .header {
+
+
+
+/**********************************/
+/***** Layout & Section Title *****/
+/**********************************/
+.container {
     width: 100%;
-  }
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
-  .header {
-    padding: 20px; /* Adjust header padding for smaller screens */
-  }
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
 
-  .overlay {
-    border-radius: 0; /* Remove border-radius for overlay on smaller screens */
-  }
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
 
-  .swiper-slide img {
-    border-radius: 0; /* Remove border-radius for images on smaller screens */
-  }
+@media (min-width: 992px) {
+    .container {
+        max-width: 100%;
+    }
+}
 
-  .year-heading {
-    font-size: 24px; /* Adjust year heading font size for smaller screens */
-  }
+@media (min-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
+}
 
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none; /* Hide the next and previous buttons on smaller screens */
-  }
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
 
-  /* Add any additional styles for smaller screens as needed */
+.column {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+ 
+
+@media (min-width: 576px) {
+    .column {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .column {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .column {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+.section-title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 45px 0 30px 0;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: 0;
+    background: #eeeeee;
+}
+
+.section-title h1 {
+    color: #ffffff;
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+
+@media(max-width: 767.98px) {
+    .section-title h1 {
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+}
+
+@media(max-width: 567.98px) {
+    .section-title h1 {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+}
+
+
+
+/**********************************/
+/********** Effect #1 CSS *********/
+/**********************************/
+.effect-1 {
+  position: relative; /* Add this line */
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.effect-1 .effect-img {
+    font-size: 0;
+}
+
+.effect-1 .effect-img img {
+    width: 100%;
+    height: auto;
+}
+
+.effect-1 .effect-text {
+  position: absolute;
+  width: 53%;
+  height: 100%;
+  padding: 30px;
+  top: 0; /* Change this line */
+  transform: translateY(100%);
+  left: 14.5%;
+  text-align: center;
+  background: rgba(0, 0, 0, .5);
+  transition: .5s;
+}
+
+.effect-1:hover .effect-text {
+  transform: translateY(0);
+  padding: 15px; /* Adjust the padding as needed */
+  height: calc(100% - 30px); /* Adjust the height as needed */
+}
+.effect-1 .effect-text h2 {
+    height: 45px;
+    color: #ffffff;
+    font-size: 20px;
+    margin: -25px 0 0 0;
+    transition: .5s;
+}
+
+.effect-1:hover .effect-text h2 {
+    margin: 0;
+}
+
+.effect-1 .effect-text p {
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+@media only screen and (max-width: 600px) {
+  .effect-1 .effect-text {
+      position: static; /* Remove absolute positioning for small screens */
+      width: 100%; /* Take full width of the container */
+      height: auto; /* Allow height to adjust based on content */
+      padding: 15px; /* Adjust padding for spacing */
+      margin-left: 0; /* Remove left margin */
+      transform: translateY(0); /* Remove translateY for immediate visibility */
+      transition: none; /* Remove transition effect */
+  }
 }
