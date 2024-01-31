@@ -299,17 +299,45 @@ section {
   padding: 12px 0;
 }
 
+/* Default styles for logo image */
 .header .logo img {
-  max-height: 40px;
+  max-height: 180px;
   margin-right: 6px;
 }
 
+/* Default styles for logo h1 */
 .header .logo h1 {
   font-size: 30px;
   font-weight: 700;
   color: #fff;
   font-family: var(--font-secondary);
   margin: 0;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .header .logo img {
+    max-height: 120px; /* Adjust the max height for smaller screens */
+    margin-right: 4px; /* Adjust the margin for smaller screens */
+  }
+
+  .header .logo h1 {
+    font-size: 24px; /* Adjust the font size for smaller screens */
+  }
+}
+
+/* Media query for screens with a maximum width of 576px */
+@media (max-width: 576px) {
+  /* Further adjustments for even smaller screens */
+  .header .logo img {
+    max-height: 80px; /* Adjust the max height for even smaller screens */
+    margin-right: 2px; /* Adjust the margin for even smaller screens */
+  }
+
+  .header .logo h1 {
+    font-size: 18px; /* Adjust the font size for even smaller screens */
+  }
 }
 
 /*--------------------------------------------------------------
