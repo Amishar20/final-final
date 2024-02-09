@@ -301,8 +301,8 @@ section {
 
 /* Default styles for logo image */
 .header .logo img {
-  max-height: 80px;
-  margin-right: 4px;
+  max-height: 50px;
+  margin-right: 3px;
 }
 .header .logo-right img {
   max-height: 90px; /* Adjust the max height as needed */
