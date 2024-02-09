@@ -301,7 +301,7 @@ section {
 
 /* Default styles for logo image */
 .header .logo img {
-  max-height: 50px !important;
+  max-height: 110px;
   margin-right: 3px;
 }
 .header .logo-right img {
