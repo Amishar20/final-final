@@ -301,12 +301,12 @@ section {
 
 /* Default styles for logo image */
 .header .logo img {
-  max-height: 110px;
+  max-height: 80px;
   margin-right: 4px;
 }
 .header .logo-right img {
-  max-height: 190px; /* Adjust the max height as needed */
-  margin-left: 6px; /* Add margin to separate it from the navbar items */
+  max-height: 90px; /* Adjust the max height as needed */
+  margin-left: 4px; /* Add margin to separate it from the navbar items */
 }
 
 /* Default styles for logo h1 */
