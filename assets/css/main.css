@@ -301,8 +301,12 @@ section {
 
 /* Default styles for logo image */
 .header .logo img {
-  max-height: 180px;
-  margin-right: 6px;
+  max-height: 110px;
+  margin-right: 4px;
+}
+.header .logo-right img {
+  max-height: 190px; /* Adjust the max height as needed */
+  margin-left: 6px; /* Add margin to separate it from the navbar items */
 }
 
 /* Default styles for logo h1 */
