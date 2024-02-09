@@ -322,8 +322,8 @@ section {
 @media (max-width: 768px) {
   /* Adjust styles for smaller screens */
   .header .logo img {
-    max-height: 120px; /* Adjust the max height for smaller screens */
-    margin-right: 4px; /* Adjust the margin for smaller screens */
+    max-height: 60px; /* Adjust the max height for smaller screens */
+    margin-right: 2px; /* Adjust the margin for smaller screens */
   }
 
   .header .logo h1 {
