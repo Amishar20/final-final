@@ -320,9 +320,9 @@ section {
 
 /* Media query for screens with a maximum width of 768px */
 @media (max-width: 768px) {
-  /* Adjust styles for smaller screens */
+  /* Adjust styles for smaller screens *
   .header .logo img {
-    max-height: 120px; /* Adjust the max height for smaller screens */
+    max-height: 120px; /* Adjust the max height for smaller screens *
     margin-right: 4px; /* Adjust the margin for smaller screens */
   }
 
