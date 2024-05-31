@@ -29,7 +29,7 @@
   <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-
+  <link href="/assets/css/projects.css" rel="stylesheet">
   <!-- Template Main CSS File -->
   <link href="/assets/css/main.css" rel="stylesheet">
   <!--<link rel="stylesheet" href="https://teamoorja.com/assets/vendor/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
@@ -151,89 +151,107 @@
        </div>
       
     </section><!-- End Our Services Section -->
-
-    <!-- ======= Services Cards Section ======= -->
-    <section id="services-cards" class="services-cards">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg" style="background-image: url(https://res.cloudinary.com/ddjdhrevz/image/upload/v1699135963/krt_pic_mgowii.jpg);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">Electric-Go Kart</h4>
-                    <p>Transitioning from combustion to electric, our team at TIET designed and built an electric go-kart, debuting in the Indian Karting Championship (IKC) Season-5 with a notable 3rd place finish. Recognized for the best design presentation, we're now geared up for more electrifying competitions ahead.</p>
-                  </div>
-                </div>
+    <div class="wrapper">
+      <div class="page-wrapper">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="img-container">
+                <img loading="lazy" draggable="false" src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1717175306/Screenshot_2024-04-01_111230_uagd0f.png" />
               </div>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg" style="background-image: url(https://res.cloudinary.com/ddjdhrevz/image/upload/v1693939924/Screenshot_20230819_185957_Drive_3_ey17zr.png);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">Quad Torc Concept</h4>
-                    <p>Introducing the Quad Torc Concept in 2020, our team achieved widespread acclaim and secured the overall runners-up position, a testament to our dedication to innovation. Recognized with the prestigious Best Captain Award, our leadership has propelled us to unparalleled heights in engineering excellence.</p>
-                  </div>
-                </div>
+              <div class="swiper-content">
+                <h1>Electric-Go Kart</h1>
+                <p>Team Oorja's electric go-kart project involved designing and building a high-performance electric go-kart from the ground up. The team focused on innovative solutions to optimize the vehicle's efficiency, safety, and performance. They meticulously prepared for and successfully passed the demanding Technical Inspection in both mechanical and electrical departments, demonstrating their commitment to excellence in electric vehicle engineering.</p>
               </div>
+              <button class="swiper-heart" onclick="toggleLike(this)">
+                <i class="fa-regular fa-heart fa-3x"></i>
+              </button>
+              <button onclick="openInfo(this)" class="swiper-info-toggle">
+                <i class="fa-solid fa-circle-info fa-3x"></i>
+              </button>
             </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg" style="background-image: url(https://res.cloudinary.com/ddjdhrevz/image/upload/v1699137709/WhatsApp_Image_2023-08-21_at_3.57.35_AM_tkfo2b_yu3hys.jpg);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">E-Tron</h4>
-                    <p>Crafted for the EFFI cars competition, our solar-powered electric vehicle aimed at energy efficiency, winning the best design award in 2016. Currently, our focus shifts to implementing a drive-by-wire system, marking the next phase in our commitment to sustainable and innovative transportation.</p>
-                  </div>
-                </div>
+            <div class="swiper-slide">
+              <div class="img-container">
+                <img loading="lazy" draggable="false" src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699135963/krt_pic_mgowii.jpg" />
               </div>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg" style="background-image: url(https://res.cloudinary.com/ddjdhrevz/image/upload/v1693938819/IMG_6361_1_xhodu0.jpg);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">IC-Go Kart</h4>
-                    <p>In 2017, our team crafted a combustion engine-powered go-kart for the Go-Kart Design Challenge (GKDC), achieving an AIR of 27 out of 190 teams nationally and winning the 2nd best acceleration award. Building on this, we developed another go-kart for the subsequent season, leading to an overall runner-up position and multiple awards in the next event.</p>
-                  </div>
-                </div>
+              <div class="swiper-content">
+                <h1>Electric-Go Kart</h1>
+                <p>Transitioning from combustion to electric, our team at TIET designed and built an electric go-kart, debuting in the Indian Karting Championship (IKC) Season-5 with a notable 3rd place finish. Recognized for the best design presentation, we're now geared up for more electrifying competitions ahead.</p>
               </div>
+              <button class="swiper-heart" onclick="toggleLike(this)">
+                <i class="fa-regular fa-heart fa-3x"></i>
+              </button>
+              <button onclick="openInfo(this)" class="swiper-info-toggle">
+                <i class="fa-solid fa-circle-info fa-3x"></i>
+              </button>
             </div>
-          </div><!-- End Card Item -->
-
+            <div class="swiper-slide">
+              <div class="img-container">
+                <img loading="lazy" draggable="false" src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1693939924/Screenshot_20230819_185957_Drive_3_ey17zr.png" />
+              </div>
+              <div class="swiper-content">
+                <h1>Quad Torc Concept</h1>
+                <p>Introducing the Quad Torc Concept in 2020, our team achieved widespread acclaim and secured the overall runners-up position, a testament to our dedication to innovation. Recognized with the prestigious Best Captain Award, our leadership has propelled us to unparalleled heights in engineering excellence.</p>
+              </div>
+              <button class="swiper-heart" onclick="toggleLike(this)">
+                <i class="fa-regular fa-heart fa-3x"></i>
+              </button>
+              <button onclick="openInfo(this)" class="swiper-info-toggle">
+                <i class="fa-solid fa-circle-info fa-3x"></i>
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-container">
+                <img loading="lazy" draggable="false" src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1699137709/WhatsApp_Image_2023-08-21_at_3.57.35_AM_tkfo2b_yu3hys.jpg" />
+              </div>
+              <div class="swiper-content">
+                <h1>E-Tron</h1>
+                <p>Crafted for the EFFI cars competition, our solar-powered electric vehicle aimed at energy efficiency, winning the best design award in 2016. Currently, our focus shifts to implementing a drive-by-wire system, marking the next phase in our commitment to sustainable and innovative transportation.</p>
+              </div>
+              <button class="swiper-heart" onclick="toggleLike(this)">
+                <i class="fa-regular fa-heart fa-3x"></i>
+              </button>
+              <button onclick="openInfo(this)" class="swiper-info-toggle">
+                <i class="fa-solid fa-circle-info fa-3x"></i>
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-container">
+                <img loading="lazy" draggable="false" src="https://res.cloudinary.com/ddjdhrevz/image/upload/v1693938819/IMG_6361_1_xhodu0.jpg" />
+              </div>
+              <div class="swiper-content">
+                <h1>IC-Go Kart</h1>
+                <p>In 2017, our team crafted a combustion engine-powered go-kart for the Go-Kart Design Challenge (GKDC), achieving an AIR of 27 out of 190 teams nationally and winning the 2nd best acceleration award. Building on this, we developed another go-kart for the subsequent season, leading to an overall runner-up position and multiple awards in the next event.</p>
+              </div>
+              <button class="swiper-heart" onclick="toggleLike(this)">
+                <i class="fa-regular fa-heart fa-3x"></i>
+              </button>
+              <button onclick="openInfo(this)" class="swiper-info-toggle">
+                <i class="fa-solid fa-circle-info fa-3x"></i>
+              </button>
+            </div>
+          </div>
         </div>
-
+        <div class="infosection">
+          <div class="pagination-container">
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="myButtonsDiv">
+            <div class="swiper-button myPreviousButton">
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div class="swiper-button myNextButton">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      
-    </section><!-- End Services Cards Section -->
-    
-
+    </div>
+    <!-- partial -->
    
-
+    
   </main><!-- End #main -->
-
+</body>
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
@@ -307,7 +325,8 @@ Patiala, 147004 <br><br>
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
-
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js'></script>
+  
   <!-- Vendor JS Files -->
   <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/vendor/aos/aos.js"></script>
@@ -318,7 +337,120 @@ Patiala, 147004 <br><br>
 
   <!-- Template Main JS File -->
   <script src="/assets/js/main.js"></script>
-  </body>
+  <script type="module">
+    const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    slidesPerView: 2,
+    spaceBetween: 30,
+    direction: 'horizontal',
+    loop: true,
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.myNextButton',
+      prevEl: '.myPreviousButton',
+    },
+  
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<span class="${className}">
+                  <div clas="swiper-pagination-bullet-fill"></div>
+                </span>`
+      },
+    },
+      breakpoints: {
+      // when window width is >= 320px
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      // when window width is >= 480px
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      // when window width is >= 640px
+      1200: {
+        slidesPerView: 3,
+      }
+    },
+      // autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      //   pauseOnMouseEnter: true
+      // },
+  });
+  
+  const toggleLike = (e) => {
+    const parentSlide = e.parentNode;
+    const icon = e.querySelector("i");
+    const heartEffects = document.querySelector(`
+          .swiper-slide
+          .swiper-heart
+          .hearts-effect`);
+    
+    if (parentSlide.dataset.liked === "true") {
+      
+      icon.classList.replace("fa-solid", "fa-regular");
+      parentSlide.dataset.liked = "false";
+      return;
+    }
+    
+      e.insertAdjacentHTML("beforeend", `
+          <div class="hearts-effect">
+            <i class="fa-solid fa-heart fa-1x"></i>
+            <i class="fa-solid fa-heart fa-2x"></i>
+            <i class="fa-solid fa-heart fa-2x"></i>
+          </div>
+      `);
+      icon.classList.replace("fa-regular", "fa-solid");
+      parentSlide.dataset.liked = "true";
+    
+        setTimeout(() => {
+        const heartEffects = document.querySelector(`
+          .swiper-slide
+          .swiper-heart
+          .hearts-effect`);
+          
+        heartEffects?.remove();
+        
+      }, 1000)
+      return;
+   }
+  const openInfo = (e) => {
+    const parentSlide = e.parentNode;
+    const icon = e.querySelector("i");
+    
+    if (parentSlide.dataset.opened === "true") {
+      parentSlide.dataset.closing = "true";
+      parentSlide.dataset.opened = "false";
+      setTimeout(() => {
+        icon.classList.replace("fa-xmark", "fa-circle-info");
+      }, 500);
+      setTimeout(() => {
+        parentSlide.dataset.closing = "false"; 
+      }, 1000);
+      
+      return;
+    }
+    
+    parentSlide.dataset.opened = "true";
+    parentSlide.dataset.closing = "false";
+    setTimeout(() => {
+      icon.classList.replace("fa-circle-info", "fa-xmark");
+  
+    }, 500);
+  
+  }
+  const closeInfo = (e) => {
+    
+  }
+  </script>
+  
+  
 
 </body>
 
