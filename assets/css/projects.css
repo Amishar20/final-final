@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700;900&display=swap');
+:root {
+    --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-primary: "Montserrat", sans-serif;
+    
+    --font-secondary: "Raleway", sans-serif;
+  }
+  
+  /* Colors */
+  :root {
+    --color-default: #2b180d;
+    --color-primary: #56b8e6;
+    --color-secondary: #1b2f45;
+  }
+  
+  /* Smooth scroll behavior */
+  :root {
+    scroll-behavior: smooth;
+  }
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #008080 50%, #00000030 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 3rem;
+  
+}
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    background: url("https://static.vecteezy.com/system/resources/previews/000/241/304/original/abstract-comic-dotted-background-vector.jpg");
+  background-size: cover;
+  opacity: 1%;
+}
+
+.page-wrapper {
+  max-width: 1400px;
+  margin-inline: auto;
+}
+.swiper {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  transition: 0.3s all;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  user-select: none;
+}
+.infosection {
+  width: 100%;
+  margin-inline: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.swiper-slide {
+  background-color: #49525A;
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.swiper-slide .img-container {
+/*   aspect-ratio: 3/2; */
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.swiper-slide .img-container img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.myButtonsDiv {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.swiper-button:hover {
+  cursor: pointer;
+}
+
+.swiper-button.swiper-button-disabled {
+  opacity: 50%;
+  cursor: auto;
+  pointer-events: none;
+  box-shadow: none;
+  background-color: lightgray;
+  border-color: lightgray;
+}
+
+.myPreviousButton, .myNextButton {
+  transition: 0.3s all;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: 1px solid black;
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px -2px gray;
+  color: black;
+}
+
+.myPreviousButton::before, .myPreviousButton::after {
+  content: '\2039'; /* Unicode character for left arrow */
+  font-size: 1.2rem;
+}
+
+.myNextButton::before,.myNextButton::after {
+    content: '\203A'; /* Unicode character for right arrow */
+    font-size: 1.2rem; /* Adjust the font size as needed */
+  }
+
+
+.myPreviousButton::after, .myNextButton::after {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 0;
+  background: lightgray;
+  transform: rotate(45deg);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: black;
+  animation: animateDot 250ms ease-out;
+}
+
+@keyframes animateDot {
+  from {
+    transform: scale(0) rotate(45deg);
+  }
+  to {
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+.pagination-container {
+  position: relative;
+  width: max-content;
+}
+.swiper-pagination {
+  position: relative;
+  width: 300px;
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+}
+
+@media (width <= 640px) {
+  .wrapper {
+    padding: 1rem;
+  }
+  .swiper {
+    height: 400px;
+  }
+}
+
+.swiper-slide[data-opened = "true"] .swiper-content {
+  bottom: 0;
+  opacity: 1;
+}
+
+.swiper-content {
+  position: absolute;
+  bottom: -100%;
+  min-height: 45%;
+  height: auto;
+  max-height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 1rem;
+  opacity: 0;
+  transition: 0.5s bottom cubic-bezier(.16,.8,.21,1),
+    0.6s opacity linear
+}
+.swiper-content > p {
+  font-size: 0.9rem;
+}
+
+@media (width > 1020px) {
+  .swiper-slide:hover > .swiper-content {
+    bottom: 0;
+    opacity: 1;
+  } 
+}
+
+.swiper-content > h1 {
+  margin-top: 0;
+}
+
+.swiper-heart {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  width: max-content;
+  height: max-content;
+  z-index: 20;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+}
+.swiper-heart:hover {
+  cursor: pointer;
+}
+.swiper-slide i {
+  color: white;
+}
+.swiper-slide[data-liked = "true"] .swiper-heart > i {
+  color: red;
+  animation: like 0.5s cubic-bezier(.31,.66,0,.98) forwards;
+}
+
+@keyframes like {
+  0%, 100% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.5);
+  }
+}
+
+.hearts-effect {
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hearts-effect i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+  user-select: none;
+}
+.swiper-slide:not([data-liked]) .swiper-heart .hearts-effect,
+.swiper-slide[data-liked = "false"] .swiper-heart .hearts-effect {
+  display: none;
+}
+
+.swiper-slide[data-liked = "true"] .swiper-heart .hearts-effect i:nth-child(1) {
+  animation: heart1Effect 1s cubic-bezier(.31,.66,0,.98);
+}
+
+.swiper-slide[data-liked = "true"] .swiper-heart .hearts-effect i:nth-child(2) {
+  animation: heart2Effect 1s cubic-bezier(.31,.66,0,.98);
+}
+
+.swiper-slide[data-liked = "true"] .swiper-heart .hearts-effect i:nth-child(3) {
+  animation: heart3Effect 1s cubic-bezier(.31,.66,0,.98);
+}
+
+@keyframes heart1Effect {
+  to {
+    transform: translate(50px, 10px) rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes heart2Effect {
+  to {
+    transform: translate(-50px, 10px) rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes heart3Effect {
+  to {
+    transform: translate(5px, -50px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media (width <= 1020px) {
+  .swiper-content {
+    transition: 1s bottom cubic-bezier(.16,.8,.21,1),
+      0.6s opacity linear
+  }
+  .swiper-slide .swiper-content h1 {
+    word-spacing: calc(9999rem);
+  }
+  .swiper-slide .swiper-content {
+    min-height: 100%
+  }
+  .swiper-content > p {
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+  }
+}
+
+.swiper-slide .swiper-info-toggle {
+  display: block;
+  position: absolute;
+  bottom: calc(100% - 4rem);
+  left: 2rem;
+  z-index: 20;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+}
+.swiper-slide[data-closing = "true"] .swiper-info-toggle {
+  animation:
+    exitFrameFromUnder var(--time-025) ease-in forwards,
+    getReadyForEntryAbove 1ms var(--time-025) forwards,
+    goDownOutIntoFrame var(--time-025) ease-out var(--time-05) forwards; 
+}
+
+.swiper-info-toggle:hover {
+  cursor: pointer;
+}
+
+.swiper-slide[data-opened = "true"] .swiper-info-toggle {
+  animation: 
+    goUpOutOfFrame var(--time-025) ease-in forwards,
+    getReadyForEntryUnder 1ms var(--time-025) forwards,
+    enterFrameFromUnder var(--time-025) ease-out var(--time-05) forwards;
+}
+
+@media (max-width: 1020px) {
+    .swiper-slide:hover > .swiper-content {
+      bottom: 0;
+      opacity: 1;
+    } 
+  }
+  
+  @media (max-width: 640px) {
+    .wrapper {
+      padding: 1rem;
+    }
+    .swiper {
+      height: 400px;
+    }
+  }
+  
+  @media (max-width: 1020px) {
+    .swiper-content {
+      transition: 1s bottom cubic-bezier(.16,.8,.21,1),
+        0.6s opacity linear
+    }
+    .swiper-slide .swiper-content h1 {
+      word-spacing: calc(9999rem);
+    }
+    .swiper-slide .swiper-content {
+      min-height: 100%
+    }
+    .swiper-content > p {
+      font-size: clamp(0.75rem, 2vw, 0.9rem);
+    }
+  }
+  
+  @media (max-width: 1020px) {
+    .swiper-slide .swiper-info-toggle {
+      display: none;
+    }
+  }
+  
