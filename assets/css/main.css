@@ -659,7 +659,7 @@ section {
 
 
 .mobile-nav-show {
-  display: none;
+  display: block;
 }
 
 .mobile-nav-hide {
