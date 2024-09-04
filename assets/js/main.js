@@ -20,44 +20,25 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollY > 100 ? selectHeader.classList.add('sticked') : selectHeader.classList.remove('sticked');
     });
   }
-
-  /**
-   * Mobile nav toggle
-   */
-  const mobileNavShow = document.querySelector('.mobile-nav-show');
-  const mobileNavHide = document.querySelector('.mobile-nav-hide');
-
-  document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
-    el.addEventListener('click', function(event) {
-      event.preventDefault();
-      mobileNavToogle();
-    })
-  });
-
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavShow.classList.toggle('d-none');
-    mobileNavHide.classList.toggle('d-none');
-  }
-
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
-
-  navDropdowns.forEach(el => {
-    el.addEventListener('click', function(event) {
-      if (document.querySelector('.mobile-nav-active')) {
-        event.preventDefault();
-        this.classList.toggle('active');
-        this.nextElementSibling.classList.toggle('dropdown-active');
-
-        let dropDownIndicator = this.querySelector('.dropdown-indicator');
-        dropDownIndicator.classList.toggle('bi-chevron-up');
-        dropDownIndicator.classList.toggle('bi-chevron-down');
-      }
-    })
-  });
+  document.querySelectorAll('.dropdown-toggle').forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+        let dropdown = this.nextElementSibling;
+        
+        // Toggle dropdown visibility
+        if (dropdown.style.display === 'block') {
+            dropdown.style.display = 'none';
+        } else {
+            // Close all other dropdowns
+            document.querySelectorAll('.dropdown ul').forEach(ul => {
+                if (ul !== dropdown) {
+                    ul.style.display = 'none';
+                }
+            });
+            dropdown.style.display = 'block';
+        }
+    });
+});
 
   /**
    * Scroll top button
@@ -188,4 +169,15 @@ document.addEventListener('DOMContentLoaded', () => {
     aos_init();
   });
 
+});
+const mobileNavShow = document.querySelector('.mobile-nav-show');
+const mobileNavHide = document.querySelector('.mobile-nav-hide');
+const navbar = document.querySelector('.navbar');
+
+mobileNavShow.addEventListener('click', () => {
+  navbar.classList.add('mobile-nav-active');
+});
+
+mobileNavHide.addEventListener('click', () => {
+  navbar.classList.remove('mobile-nav-active');
 });
