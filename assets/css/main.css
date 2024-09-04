@@ -1,7 +1,7 @@
 :root {
   --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-primary: "Montserrat", sans-serif;
-
+  
   --font-secondary: "Raleway", sans-serif;
 }
 
@@ -16,81 +16,66 @@
 :root {
   scroll-behavior: smooth;
 }
-
 .bg {
-  animation: slide 3s ease-in-out infinite alternate;
+  animation:slide 3s ease-in-out infinite alternate;
   background-image: linear-gradient(-60deg, #008080 50%, #00000030 50%);
-  bottom: 0;
-  left: -50%;
-  opacity: .5;
-  position: fixed;
-  right: -50%;
-  top: 0;
-  z-index: -1;
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
 }
 
 .bg2 {
-  animation-direction: alternate-reverse;
-  animation-duration: 4s;
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
 }
 
 .bg3 {
-  animation-duration: 5s;
+  animation-duration:5s;
 }
 
 .content {
-  background-color: rgba(255, 255, 255, .8);
-  border-radius: .25em;
-  box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
-  box-sizing: border-box;
-  left: 50%;
-  padding: 10vmin;
-  position: fixed;
-  text-align: center;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
 }
 
 h1 {
-  font-family: monospace;
+  font-family:monospace;
 }
 
 @keyframes slide {
   0% {
-    transform: translateX(-25%);
+    transform:translateX(-25%);
   }
-
   100% {
-    transform: translateX(25%);
+    transform:translateX(25%);
   }
 }
-
-@keyframes slide {
-  0% {
-    transform: translateX(-25%);
-  }
-
-  100% {
-    transform: translateX(25%);
-  }
-}
-
-
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
   font-family: var(--font-default);
   color: var(--color-default);
-  background-color: #374a6c !important;
+  background-color:  #374a6c !important;
 }
 
 a {
   color: var(--color-primary);
   text-decoration: none;
   transition: 0.3s;
-
+  
 }
 
 a:hover {
@@ -107,12 +92,10 @@ h5,
 h6 {
   font-family: var(--font-primary);
 }
-
 h1 {
   font-family: 'Your Attractive Font', sans-serif;
   /* Add fallback fonts in case the primary font is not available */
 }
-
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
@@ -258,14 +241,11 @@ section {
 
 #preloader:before {
   content: "";
-  border: 8px solid #00fff9;
-  /* Increased border thickness */
+  border: 8px solid #00fff9; /* Increased border thickness */
   border-top-color: #000;
   border-radius: 50%;
-  width: 180px;
-  /* Slightly smaller width */
-  height: 180px;
-  /* Slightly smaller height */
+  width: 180px; /* Slightly smaller width */
+  height: 180px; /* Slightly smaller height */
   animation: animate-preloader 2s linear infinite, rotate-loader 2s linear infinite;
 }
 
@@ -306,12 +286,6 @@ section {
   transition: all 0.5s;
   z-index: 997;
   padding: 24px 0;
-  display: flex;
-  /* Use flexbox for layout */
-  align-items: center;
-  /* Center items vertically */
-  justify-content: space-between;
-  /* Space between left logo and navbar */
 }
 
 @media (max-width: 1200px) {
@@ -321,37 +295,18 @@ section {
 }
 
 .header.sticked {
+  background: rgba(27, 47, 69, 0.9);
   padding: 12px 0;
 }
-
-* Default styles for logo image */ .header .logo img {
-  max-height: 100px;
-  /* Adjust size for visibility */
-  max-width: 150px;
-  /* Adjust size for visibility */
-  margin-right: 20px;
-  /* Space between logo and navbar items */
+/* Default styles for logo image */
+.header .logo img {
+  max-height: 110px;
+  margin-right: 6px;
 }
 
 .header .logo-right img {
-  max-height: 100px;
-  /* Adjust size for visibility */
-  max-width: 150px;
-  /* Adjust size for visibility */
-  margin-left: 5px;
-  /* Space between navbar items and right logo */
-  cursor: pointer;
-  margin-top: -20px;
-}
-
-.header .logo-left img {
-  max-height: 80px;
-  /* Adjust size for visibility */
-  max-width: 150px;
-  /* Adjust size for visibility */
-  margin-right: 20px;
-  cursor: pointer;
-  margin-top: -20px;
+    max-height: 160px; /* Adjust the max height as needed */
+    margin-left: 4px; /* Add margin to separate it from the navbar items */
 }
 
 
@@ -364,167 +319,136 @@ section {
   margin: 0;
 }
 
-/* Media queries for responsive logo */
+/* Media query for screens with a maximum width of 768px */
 @media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
   .header .logo img {
-    max-height: 50px;
-    /* Adjust the max height for smaller screens */
-    margin-right: 10px;
-    /* Adjust the margin for smaller screens */
+    max-height: 60px; /* Adjust the max height for smaller screens */
+    margin-right: 2px; /* Adjust the margin for smaller screens */
   }
 
   .header .logo h1 {
-    font-size: 24px;
-    /* Adjust the font size for smaller screens */
+    font-size: 24px; /* Adjust the font size for smaller screens */
   }
 }
 
+/* Media query for screens with a maximum width of 576px */
 @media (max-width: 576px) {
+  /* Further adjustments for even smaller screens */
   .header .logo img {
-    max-height: 40px;
-    /* Adjust the max height for even smaller screens */
-    margin-right: 5px;
-    /* Adjust the margin for even smaller screens */
+    max-height: 80px; /* Adjust the max height for even smaller screens */
+    margin-right: 2px; /* Adjust the margin for even smaller screens */
   }
 
   .header .logo h1 {
-    font-size: 18px;
-    /* Adjust the font size for even smaller screens */
-
+    font-size: 18px; /* Adjust the font size for even smaller screens */
   }
 }
 
 /*--------------------------------------------------------------
-# Navbar
+# Desktop Navigation
 --------------------------------------------------------------*/
-/* Navbar styles */
-.navbar {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  /* Allow navbar to take available space */
-  margin-left: 0;
-  /* Align navbar items properly */
+@media (min-width: 1280px) {
+  .navbar {
+    padding: 0;
+  }
+
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navbar li {
+    position: relative;
+  }
+
+  .navbar a,
+  .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0 15px 30px;
+    font-family: var(--font-default);
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navbar a i,
+  .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>a {
+    color: #fff;
+  }
+
+  .navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.2s;
+  }
+
+  .navbar .dropdown ul li {
+    min-width: 200px;
+  }
+
+  .navbar .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    color: var(--color-secondary);
+  }
+
+  .navbar .dropdown ul a i {
+    font-size: 12px;
+  }
+
+  .navbar .dropdown ul a:hover,
+  .navbar .dropdown ul .active:hover,
+  .navbar .dropdown ul li:hover>a {
+    color: var(--color-primary);
+  }
+
+  .navbar .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+
+  .navbar .dropdown .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+  }
 }
 
-.navbar ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  list-style: none;
-  align-items: center;
-  flex-grow: 1;
-  /* Allow ul to take available space between logos */
-}
-
-.navbar li {
-  position: relative;
-}
-
-.navbar a,
-.navbar a:focus {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Center text and icons within the link */
-  padding: 15px 20px;
-  /* Adjusted padding to reduce space */
-  font-family: var(--font-default);
-  font-size: 15px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.6);
-  white-space: nowrap;
-  transition: 0.3s;
-}
-
-.navbar a i,
-.navbar a:focus i {
-  font-size: 12px;
-  line-height: 0;
-  margin-left: 5px;
-}
-
-.navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
-.navbar li:hover>a {
-  color: #fff;
-}
-
-/* Dropdown styles */
-.navbar .dropdown ul {
-  display: none;
-  /* Ensure dropdown is hidden initially */
-  position: absolute;
-  left: 0;
-  top: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  background: #1d2f45;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  z-index: 99;
-}
-
-/* Show dropdown on hover */
-.navbar .dropdown:hover>ul {
-  display: block;
-}
-
-.navbar .dropdown ul li {
-  min-width: 200px;
-}
-
-.navbar .dropdown ul a {
-  display: block;
-  padding: 10px;
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
-  transition: color 0.3s;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  z-index: 99;
-}
-
-.navbar .dropdown ul a:hover {
-  color: white;
-}
-
-.navbar .dropdown .dropdown ul {
-  top: 0;
-  left: calc(100% - 30px);
-  display: none;
-  /* Ensure nested dropdown is hidden initially */
-  z-index: 1000;
-}
-
-.navbar .dropdown .dropdown:hover>ul {
-  display: block;
-  /* Show nested dropdown on hover */
-}
-
-/* Logo sizing */
-.logo img,
-.logo-left img {
-  min-height: 100px;
-  /* Adjust size for visibility */
-  min-width: 150px;
-  /* Adjust size for visibility */
-  object-fit: contain;
-  /* Maintain aspect ratio */
-
-}
-
-.logo-right img {
-  min-height: 100px;
-  /* Adjust size for visibility */
-  min-width: 150px;
-  /* Adjust size for visibility */
-  object-fit: contain;
-  /* Maintain aspect ratio */
-}
-
-/* Responsive Design */
 @media (min-width: 1280px) and (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
     left: -90%;
@@ -535,40 +459,46 @@ section {
   }
 }
 
+@media (min-width: 1280px) {
+
+  .mobile-nav-show,
+  .mobile-nav-hide {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Mobile Navigation
+--------------------------------------------------------------*/
 @media (max-width: 1279px) {
   .navbar {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     width: 100%;
-    height: 110px;
-    /* Adjust the height as needed */
+    max-width: 400px;
+    bottom: 0;
     transition: 0.3s;
     z-index: 9997;
-    background-color: rgba(27, 47, 69, 0.9);
-    /* Add a background color */
   }
 
   .navbar ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 20px;
+    position: absolute;
+    inset: 0;
+    padding: 50px 0 10px 0;
     margin: 0;
-    margin-top: -20px;
-  }
-
-  .navbar li {
-    flex: 1;
-
+    background: rgba(27, 47, 69, 0.9);
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
   }
 
   .navbar a,
   .navbar a:focus {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 10px 20px;
     font-family: var(--font-default);
     font-size: 15px;
     font-weight: 600;
@@ -591,103 +521,54 @@ section {
     color: #fff;
   }
 
-  .mobile-nav-show {
-    display: none;
-    /* Hide the mobile nav */
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar ul {
-    display: none;
-  }
-
-  .navbar li {
-    margin-bottom: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    padding: 0;
-  }
-
-  .navbar ul {
-    display: block;
-  }
-
-  .navbar li {
-    margin-bottom: 5px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar ul {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .navbar li {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .header .logo img {
-    max-height: 50px;
-    max-width: 100px;
-  }
-
-  .header .logo-right img,
-  .header .logo-left img {
-    max-height: 50px;
-    max-width: 100px;
-  }
-}
-
-
-.mobile-nav-show {
-  display: none;
-}
-
-.mobile-nav-hide {
-  display: none;
-}
-
-.mobile-nav-active .mobile-nav-show {
-  display: none;
-}
-
-.mobile-nav-active .mobile-nav-hide {
-  display: block;
-}
-
-.mobile-nav-active .navbar ul {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .navbar .dropdown ul {
-    display: block;
+  .navbar .dropdown ul,
+  .navbar .dropdown .dropdown ul {
     position: static;
-    box-shadow: none;
-    background: rgba(27, 47, 69, 0.9);
+    display: none;
+    padding: 10px 0;
+    margin: 10px 20px;
+    background-color: rgba(20, 35, 51, 0.6);
   }
 
-  .navbar .dropdown:hover>ul {
+  .navbar .dropdown>.dropdown-active,
+  .navbar .dropdown .dropdown>.dropdown-active {
     display: block;
+  }
+
+  .mobile-nav-show {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 0;
+    transition: 0.5s;
+  }
+
+  .mobile-nav-hide {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 0;
+    transition: 0.5s;
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 9999;
+  }
+
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-active .navbar {
+    right: 0;
+  }
+
+  .mobile-nav-active .navbar:before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(27, 47, 69, 0.7);
+    z-index: 9996;
   }
 }
 
@@ -705,10 +586,8 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
-  /* Place the video behind other content */
+  z-index: -1; /* Place the video behind other content */
 }
-
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -745,7 +624,6 @@ section {
 
 .hero .container {
   z-index: 1;
-
 }
 
 @media (min-width: 1365px) {
@@ -754,50 +632,22 @@ section {
   }
 }
 
-/* Hero Section Text Alignment */
-.hero .container .row .col-xl-4 {
-  width: 100%;
-  /* Make sure the container takes up the full width */
-  max-width: 600px;
-  /* Set a maximum width where the text should start wrapping */
-  text-align: center;
-  /* Align text to the left */
-  word-wrap: break-word;
-  /* Ensure long words break to the next line if needed */
-  font-size: 8px;
-  margin-left: -200px;
-  /* Move the container 20px to the left */
-  padding-left: 180px;
-  /* Add padding to avoid the text being cut off */
-
-}
-
-/* Responsive adjustments */
-@media (max-width: 640px) {
-  .hero .container .row .col-xl-4 {
-    max-width: 100%;
-    /* Full width on small screens */
-  }
-}
-
 .hero h2 {
-  margin: 10px;
+  margin: 0;
   font-size: 48px;
   font-weight: 700;
   line-height: 1.2;
   color: #fff;
   font-family: var(--font-secondary);
-  text-align: center;
 }
 
 .hero blockquote {
   color: #fff;
   padding-left: 20px;
-  padding-right: 30px;
   font-size: 15px;
   font-family: var(--font-default);
   border-left: 2px solid var(--color-primary);
-  margin: 15px;
+  margin: 40px 0;
 }
 
 .hero .btn-get-started {
@@ -852,46 +702,6 @@ section {
     font-size: 13px;
   }
 }
-
-#hero video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero {
-  background-size: cover;
-  background-position: center;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    background-position: top center;
-  }
-}
-
-.hero .container {
-  text-align: center;
-  padding: 0 20px;
-}
-
-.hero h2 {
-  font-size: 36px;
-  margin: 10px;
-}
-
-@media (max-width: 640px) {
-  .hero h2 {
-    font-size: 28px;
-  }
-}
-
-@media (min-width: 1365px) {
-  .hero {
-    background-attachment: fixed;
-  }
-}
-
 
 /*--------------------------------------------------------------
 # Why Choose Us Section
@@ -1041,7 +851,7 @@ section {
 .services-list .service-item .description {
   line-height: 24px;
   font-size: 14px;
-  color: #ffffff;
+  color:#ffffff;
 }
 
 /*--------------------------------------------------------------
@@ -1096,25 +906,20 @@ section {
   font-weight: bold;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
-
 .features .phone-wrap {
   position: absolute;
   right: 0;
 }
 
 .features .phone-wrap img {
-  width: auto;
-  /* Ensure images maintain their aspect ratio */
-  height: 340px;
-  /* Set your desired height for the images */
+  width: auto; /* Ensure images maintain their aspect ratio */
+  height: 340px; /* Set your desired height for the images */
 }
 
 @media (max-width: 992px) {
   .features .phone-wrap img {
-    height: auto;
-    /* Allow images to resize proportionally on smaller screens */
-    max-width: 100%;
-    /* Ensure images don't overflow their container */
+    height: auto; /* Allow images to resize proportionally on smaller screens */
+    max-width: 100%; /* Ensure images don't overflow their container */
     margin-top: 30px;
   }
 }
@@ -1125,8 +930,7 @@ section {
   }
 
   .features .phone-wrap img {
-    width: 100%;
-    /* Make images fill the width of their container on smaller screens */
+    width: 100%; /* Make images fill the width of their container on smaller screens */
     height: auto;
   }
 }
@@ -1138,8 +942,7 @@ section {
 .recent-posts {
   position: relative;
   background: url('') center/cover no-repeat;
-  padding: 80px 0;
-  /* Adjust the padding as needed */
+  padding: 80px 0; /* Adjust the padding as needed */
 }
 
 .recent-posts::before {
@@ -1149,15 +952,13 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(27, 47, 69, 0.8), rgba(27, 47, 69, 0.8));
-  /* Adjust the opacity and color as needed */
+  background: linear-gradient(rgba(27, 47, 69, 0.8), rgba(27, 47, 69, 0.8)); /* Adjust the opacity and color as needed */
 }
 
 .recent-posts .container {
   position: relative;
   z-index: 1;
 }
-
 .recent-posts .post-box {
   transition: 0.3s;
   height: 100%;
@@ -1165,12 +966,9 @@ section {
   position: relative;
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.9);
-  /* Adjust the opacity and color as needed for individual post boxes */
-  padding: 20px;
-  /* Adjust the padding as needed for individual post boxes */
-  border-radius: 8px;
-  /* Add rounded corners if desired for individual post boxes */
+  background: rgba(255, 255, 255, 0.9); /* Adjust the opacity and color as needed for individual post boxes */
+  padding: 20px; /* Adjust the padding as needed for individual post boxes */
+  border-radius: 8px; /* Add rounded corners if desired for individual post boxes */
 }
 
 .recent-posts .post-box .post-img {
@@ -1234,202 +1032,26 @@ section {
 .recent-posts .post-box:hover .post-img img {
   transform: scale(1.1);
 }
-
 .recent-posts .section-header h2 {
-  color: #e4e4e4;
-  /* Replace with your desired color for desktop */
+  color: #e4e4e4; /* Replace with your desired color for desktop */
 }
-
 @media (max-width: 991.98px) {
-
   /* Adjust the color for smaller screens if needed */
   .recent-posts .section-header h2 {
-    color: #000000;
-    /* Replace with your desired color for smaller screens */
+    color: #000000; /* Replace with your desired color for smaller screens */
   }
 }
-
 /* Hide background photo on smaller screens (phones) */
 @media (max-width: 767.98px) {
   .recent-posts {
     background: none;
-    padding: 40px 0;
-    /* Adjust padding for mobile devices */
+    padding: 40px 0; /* Adjust padding for mobile devices */
   }
 
   .recent-posts::before {
-    display: none;
-    /* Hide the gradient overlay as well */
+    display: none; /* Hide the gradient overlay as well */
   }
 }
-
-
-
-
-/*--------------------------------------------------------------
-# department section
---------------------------------------------------------------*/
-
-
-.department {
-  --red: hsl(0, 78%, 62%);
-  --cyan: hsl(180, 62%, 55%);
-  --orange: hsl(34, 97%, 64%);
-  --blue: hsl(212, 86%, 64%);
-  --varyDarkBlue: hsl(234, 12%, 34%);
-  --grayishBlue: hsl(229, 6%, 66%);
-  --veryLightGray: hsl(0, 0%, 98%);
-  --darkGray: hsl(0, 0%, 30%);
-  --weight1: 200;
-  --weight2: 400;
-  --weight3: 600;
-  margin-bottom: 130px;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  /* Adjust minmax values as needed */
-  grid-gap: 20px;
-}
-
-
-.department :root {
-  --red: hsl(0, 78%, 62%);
-  --cyan: hsl(180, 62%, 55%);
-  --orange: hsl(34, 97%, 64%);
-  --blue: hsl(212, 86%, 64%);
-  --varyDarkBlue: hsl(234, 12%, 34%);
-  --grayishBlue: hsl(229, 6%, 66%);
-  --veryLightGray: hsl(0, 0%, 98%);
-  --darkGray: hsl(0, 0%, 30%);
-  --weight1: 200;
-  --weight2: 400;
-  --weight3: 600;
-
-}
-
-.department .body {
-  font-size: 15px;
-  background-color: var(--veryLightGray);
-}
-
-.department .attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.department .attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
-.department .h1:last-of-type {
-  color: var(--varyDarkBlue);
-}
-
-@media (max-width: 400px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-}
-
-.department .header {
-  text-align: center;
-  line-height: 0.8;
-  margin-bottom: 50px;
-  margin-top: 100px;
-  color: balck;
-  font-family: Raleway, sans-serif;
-  text-decoration: solid;
-  margin-left: 40%;
-  margin-right: 30%;
-  background: transparent;
-}
-
-.department .header p {
-  margin: 0 auto;
-  line-height: 2;
-  color: var(--darkGraredy);
-}
-
-.department .box p {
-  color: white;
-  font-family: Raleway, sans-serif
-}
-
-.department .box {
-  border-radius: 5px;
-  padding: 30px;
-  margin: 20px;
-  box-sizing: border-box;
-  color: cyan;
-}
-
-.department .img {
-  float: right;
-
-}
-
-@media (max-width: 600px) {
-  .department .box {
-    height: 450px;
-  }
-}
-
-@media (max-width: 950px) and (min-width: 450px) {
-  .department .box {
-    text-align: center;
-    height: 180px;
-  }
-}
-
-
-.department .red {
-
-  border-top: 3px solid var(--red);
-
-}
-
-.department .blue {
-  border-top: 3px solid var(--blue);
-
-}
-
-
-
-.department .h2 {
-  color: var(--varyDarkBlue);
-  font-weight: var(--weight3);
-
-}
-
-
-.department .box-down {
-  position: relative;
-  top: 110px;
-
-}
-
-.department .box {
-  width: 20%;
-  margin-top: 92px;
-}
-
-.department .header p {
-  width: 30%;
-}
-
-
-
-
-
-/* .department .view-more-link {
-    text-decoration: underline;
-  }
-  
-  .department .view-more-link i {
-    margin-left: 5px;
-  } */
-
-
 
 /*--------------------------------------------------------------
 # Team Section
@@ -1437,7 +1059,6 @@ section {
 /* Add this CSS for the Team Member Section */
 /* Add this CSS for the Team Member Section */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;800&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -1458,7 +1079,6 @@ img {
 ul {
   list-style-type: none;
 }
-
 ul i {
   color: #fff;
   font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
@@ -1474,14 +1094,12 @@ section {
   margin-inline: auto;
   position: relative;
 }
-
 section span,
 section p,
 section h2,
 section h3 {
   letter-spacing: 0.035rem;
 }
-
 section p {
   line-height: 1.6;
   color: #a3a3a3;
@@ -1496,13 +1114,11 @@ section span {
   font-size: 1.2rem;
   color: #a3a3a3;
 }
-
 section h2 {
   font-size: clamp(3.5rem, 3rem + 1.6vw, 5rem);
   margin-top: -0.625rem;
   color: black;
 }
-
 section .cards {
   margin-top: 0.5rem;
   display: grid;
@@ -1510,14 +1126,12 @@ section .cards {
   gap: 2rem;
   padding: 0 1rem;
 }
-
 @media screen and (min-width: 51rem) {
   section .cards {
     gap: 2rem;
     padding-bottom: 2.5rem;
   }
 }
-
 section .cards .card {
   position: relative;
   cursor: pointer;
@@ -1526,18 +1140,15 @@ section .cards .card {
   background: linear-gradient(to bottom, rgba(65, 67, 69, 0.2), rgba(8, 8, 8, 0.9));
   overflow: hidden;
 }
-
 section .cards .card h3,
 section .cards .card p {
   text-transform: capitalize;
 }
-
 section .cards .card h3 {
   font-size: clamp(1rem, 0.9167rem + 0.2667vw, 1.25rem);
   font-weight: 400;
-  color: white;
+  color:white;
 }
-
 section .cards .card p {
   font-size: clamp(0.85rem, 0.75rem + 0.32vw, 1.15rem);
   letter-spacing: 0.12rem;
@@ -1558,20 +1169,20 @@ section .cards .card-content {
   bottom: 0;
   z-index: 99;
   left: 0;
-  color: white;
+  color:white;
   width: 100%;
   padding: 1.875rem 1.25rem;
   text-align: center;
-  background-color: black;
+  background-color:black;
   opacity: 60%;
-
+  
 }
 
 section .cards .card-content ul {
   display: flex;
   align-items: center;
   justify-content: center;
-
+ 
   margin-top: 1.25rem;
 }
 
@@ -1603,13 +1214,11 @@ section .cards .card-content ul {
   background: #e6e3e39c;
   position: relative;
   border-radius: 0;
-  height: 340px;
-  /* Adjust the height as needed */
+  height: 340px;  /* Adjust the height as needed */
 }
 
 .services-cards .card-item .card-bg {
-  min-height: 300px;
-  /* This ensures the image takes the full height of the card */
+  min-height: 300px; /* This ensures the image takes the full height of the card */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1632,7 +1241,6 @@ section .cards .card-content ul {
 
 /* Media query for smaller screens (adjust the max-width as needed) */
 @media only screen and (max-width: 768px) {
-
   /* Remove the background gradient on smaller screens */
   .services-cards::before {
     display: none;
@@ -1640,20 +1248,16 @@ section .cards .card-content ul {
 
   /* Adjust styles for smaller screens */
   .services-cards .card-item {
-    height: auto;
-    /* Allow the height to adjust based on content */
+    height: auto; /* Allow the height to adjust based on content */
   }
 
   .services-cards .card-item h4 {
-    font-size: 18px;
-    /* Adjust the font size as needed */
-    margin-bottom: 10px;
-    /* Adjust the margin as needed */
+    font-size: 18px; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Adjust the margin as needed */
   }
 
   .services-cards .card-item p {
-    margin-bottom: 10px;
-    /* Adjust the margin as needed */
+    margin-bottom: 10px; /* Adjust the margin as needed */
   }
 }
 
@@ -1757,27 +1361,23 @@ section .cards .card-content ul {
 /* Add the following CSS for the border effect */
 .portfolio .portfolio-item {
   position: relative;
-  margin-bottom: 20px;
-  /* Adjust the margin to create space between items */
+  margin-bottom: 20px; /* Adjust the margin to create space between items */
 }
 
 .portfolio .portfolio-item img {
-  --s: 15px;
-  /* size of the frame */
-  --b: 2px;
-  /* border thickness */
-  --w: 400px;
-  /* width of the image */
+  --s: 15px;  /* size of the frame */
+  --b: 2px;   /* border thickness */
+  --w: 400px; /* width of the image */
   --c: #fff;
 
   width: var(--w);
   aspect-ratio: 1;
   object-fit: cover;
   padding: calc(2*var(--s));
-  --_g: var(--c) var(--b), #0000 0 calc(100% - var(--b)), var(--c) 0;
+  --_g: var(--c) var(--b),#0000 0 calc(100% - var(--b)),var(--c) 0;
   background:
-    linear-gradient(var(--_g)) 50%/100% var(--_i, 100%) no-repeat,
-    linear-gradient(90deg, var(--_g)) 50%/var(--_i, 100%) 100% no-repeat;
+    linear-gradient(      var(--_g)) 50%/100% var(--_i,100%) no-repeat,
+    linear-gradient(90deg,var(--_g)) 50%/var(--_i,100%) 100% no-repeat;
   outline: calc(var(--w)/2) solid #0009;
   outline-offset: calc(var(--w)/-2 - 2*var(--s));
   transition: .4s;
@@ -1810,8 +1410,10 @@ section .cards .card-content ul {
   color: #fff;
   padding-right: 50px;
 }
+s
 
-s .portfolio .portfolio-item:hover .portfolio-info {
+
+.portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
   bottom: 20px;
 }
@@ -1827,7 +1429,6 @@ s .portfolio .portfolio-item:hover .portfolio-info {
   background: rgba(255, 255, 255, 0.9);
   padding: 15px;
 }
-
 .portfolio .portfolio-flters {
   padding: 0;
   margin: 0 auto 30px auto;
@@ -1923,21 +1524,16 @@ s .portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
   bottom: 20px;
 }
-
 .portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
   bottom: 20px;
 }
-
 /*--------------------------------------------------------------
 # Portfolio Details
--Here is the updated CSS code with the scrolling option added to the `.portfolio-description`:
-
-*/
+--------------------------------------------------------------*/
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
-  height: 550px;
-  /* Set your preferred height */
+  height: 550px; /* Set your preferred height */
   object-fit: cover;
 }
 
@@ -1969,14 +1565,14 @@ s .portfolio .portfolio-item:hover .portfolio-info {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #d6e2ef;
-  color: #ffffff;
+  color:#fff;
 }
 
 .portfolio-details .portfolio-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
-  color: #fff;
+  color:#fff;
 }
 
 .portfolio-details .portfolio-info ul li+li {
@@ -1985,16 +1581,6 @@ s .portfolio .portfolio-item:hover .portfolio-info {
 
 .portfolio-details .portfolio-description {
   padding-top: 30px;
-  max-height: 300px;
-  /* Set the height to match the image height */
-  overflow-y: auto;
-  /* Enable vertical scrolling */
-  background: rgba(255, 255, 255, 0.663);
-  /* Adjust the opacity and color as needed */
-  padding: 20px;
-  /* Adjust the padding as needed */
-  border-radius: 8px;
-  /* Add rounded corners if desired */
 }
 
 .portfolio-details .portfolio-description h2 {
@@ -2007,9 +1593,14 @@ s .portfolio .portfolio-item:hover .portfolio-info {
 .portfolio-details .portfolio-description p {
   padding: 0;
   transition: 0.3s;
-  color: darkblue;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.663); /* Adjust the opacity and color as needed */
+  padding: 20px; /* Adjust the padding as needed */
+  border-radius: 8px; /* Add rounded corners if desired */
 }
-
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
@@ -2724,7 +2315,6 @@ s .portfolio .portfolio-item:hover .portfolio-info {
   background: var(--color-primary);
   color: #fff;
 }
-
 /*-----------alumni ------*/
 
 .slider-container {
@@ -2734,32 +2324,25 @@ s .portfolio .portfolio-item:hover .portfolio-info {
 
 .swiper-container {
   width: 80%;
-  height: 300px;
-  /* Adjust the height based on your preference */
+  height: 300px; /* Adjust the height based on your preference */
   margin: 20px auto;
 }
 
 .year-heading {
   color: #fff;
-  font-size: 30px;
-  /* Year heading color */
+  font-size: 30px; /* Year heading color */
   font-weight: bold;
   text-shadow: 0 0 10px rgba(14, 116, 200, 0.959)
 }
-
 /* Add a section divider using ::after pseudo-element */
 .section::after {
   content: "";
   display: block;
   width: 100%;
-  height: 20px;
-  /* Adjust the height of the divider */
-  background-color: #56b8e6;
-  /* Choose a color for the divider */
-  margin-top: 20px;
-  /* Adjust the top margin to create space between sections */
-  margin-bottom: 20px;
-  /* Adjust the bottom margin to create space between sections */
+  height: 20px; /* Adjust the height of the divider */
+  background-color: #56b8e6; /* Choose a color for the divider */
+  margin-top: 20px; /* Adjust the top margin to create space between sections */
+  margin-bottom: 20px; /* Adjust the bottom margin to create space between sections */
 }
 
 
@@ -2786,35 +2369,27 @@ header h1 {
   max-width: 100%;
   max-height: 100%;
   margin: 0 auto;
-  transition: transform 0.3s ease-in-out;
-  /* Add a smooth transition effect */
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
 }
-
 .swiper-slide:hover img {
-  transform: scale(1.1);
-  /* Increase the scale on hover */
+  transform: scale(1.1); /* Increase the scale on hover */
 }
-
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(86, 184, 230, 0.9);
-  /* Adjust the background color and opacity */
+  background: rgba(86, 184, 230, 0.9); /* Adjust the background color and opacity */
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.3s, background 0.3s;
-  /* Add transition for background color change */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  /* Add a subtle box shadow for depth */
-  border-radius: 50%;
-  /* Ensure the overlay has a circular shape */
+  transition: opacity 0.3s, background 0.3s; /* Add transition for background color change */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle box shadow for depth */
+  border-radius: 50%; /* Ensure the overlay has a circular shape */
 }
 
 .overlay p {
@@ -2823,8 +2398,7 @@ header h1 {
 
 .swiper-slide:hover .overlay {
   opacity: 1;
-  background: rgba(83, 85, 85, 0.135);
-  /* Adjust the background color on hover */
+  background: rgba(83, 85, 85, 0.135); /* Adjust the background color on hover */
 }
 
 .swiper-slide .overlay .sub-name {
@@ -2852,7 +2426,6 @@ header h1 {
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 768px) {
-
   .swiper-container,
   .swiper-slide,
   .header {
@@ -2860,29 +2433,24 @@ header h1 {
   }
 
   .header {
-    padding: 20px;
-    /* Adjust header padding for smaller screens */
+    padding: 20px; /* Adjust header padding for smaller screens */
   }
 
   .overlay {
-    border-radius: 0;
-    /* Remove border-radius for overlay on smaller screens */
+    border-radius: 0; /* Remove border-radius for overlay on smaller screens */
   }
 
   .swiper-slide img {
-    border-radius: 0;
-    /* Remove border-radius for images on smaller screens */
+    border-radius: 0; /* Remove border-radius for images on smaller screens */
   }
 
   .year-heading {
-    font-size: 24px;
-    /* Adjust year heading font size for smaller screens */
+    font-size: 24px; /* Adjust year heading font size for smaller screens */
   }
 
   .swiper-button-next,
   .swiper-button-prev {
-    display: none;
-    /* Hide the next and previous buttons on smaller screens */
+    display: none; /* Hide the next and previous buttons on smaller screens */
   }
 
   /* Add any additional styles for smaller screens as needed */
@@ -2893,8 +2461,6 @@ header h1 {
 --------------------------------------------------------------*/
 .footer {
   font-size: 14px;
-  padding-top: 20px;
-  height: 150px;
 }
 
 .footer .footer-content {
@@ -2964,7 +2530,7 @@ header h1 {
 
 .footer .footer-content .footer-links {
   margin-bottom: 30px;
-
+ 
 }
 
 .footer .footer-content .footer-links ul {
@@ -3022,3 +2588,4 @@ header h1 {
   font-size: 13px;
   color: var(--color-secondary);
 }
+
