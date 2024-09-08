@@ -1,290 +1,127 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-   padding-top: 70px;
-    color: #fff;
-  }
-  
-  .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-   
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .header .logo img {
-    height: 40px;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-around;
-    flex-grow: 1;
-  }
-  
-  .navbar a {
-    color: #fff;
-    text-decoration: none;
-    padding: 14px 20px;
-    display: block;
-  }
-  
-  .team_profile {
-    position: relative;
-    overflow: hidden;
-    padding: 20px 0;
-    margin: 20px 0;
-    background-attachment: fixed;
-    background-size: cover;
-    /*animation: slide 3s ease-in-out infinite alternate;*/
-  }
-  
-  .team_profile .our_team_heading h1 {
-    margin: 0 0 10px;
-    font-size: 80px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #52bfc4;
-  }
-  
-  .team_profile .our_team_heading h1::after {
-    content: "";
-    width: 60px;
-    display: block;
-    margin: 10px 0;
-   /* border: 1px solid #333;*/
-  }
-  
-  .team_profile::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-   /* background: rgba(23, 23, 23, 0.7);*/
-  }
-  
-  .our_team {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 10px;
-  }
-  
-  .our_team .team-img img {
-    width: 100%;
-    height: 200px;
-  }
-  
-  .our_team .team-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    padding: 25px 10px;
-    background: linear-gradient(90deg, #cfd9df 0%, #e2ebf0 100%);
-    transform: scale(0.9, 0.9) translateY(-120%);
-    transition: all 0.50s linear;
-    opacity: 80%;
-  }
-  
-  .our_team:hover .team-content {
-    transform: scale(0.9, 0.9) translateY(0%);
-  }
-  
-  .our_team .team-content .name {
-    font-size: 15px;
-    margin: 10px 0;
-  }
-  
-  .our_team .team-content .name > span {
-    text-transform: capitalize;
-    display: block;
-    margin: 8px 0;
-    color: #fff;
-  }
-  
-  .our_team .team-content .social_link {
-    margin: 15px 0;
-    padding: 0;
-  }
-  
-  .our_team .team-content .social_link li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 7px;
-  }
-  
-  .our_team .team-content .social_link li a {
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-  }
-  
-  .row {
-    /* Styles for each row */
-    margin-bottom: 20px; /* Adjust the value as needed */
-  }
- /*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-.footer {
-    font-size: 14px;
-    width: 100%; /* Ensure the footer takes full width */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+  margin: 0;
+  font-family: Arial, sans-serif;
+ padding-top: 70px;
+  color: #fff;
 }
 
-.footer .footer-content {
-    background-color: #1b2f45;
-    background-size: contain;
-    padding: 60px 0 30px 0;
-    width: 100%; /* Ensure the footer content takes full width */
-    margin: 0 auto; /* Center align the content */
+
+
+.team_profile {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+  margin: 20px 0;
+  background-attachment: fixed;
+  background-size: cover;
+  /*animation: slide 3s ease-in-out infinite alternate;*/
 }
 
-.footer .footer-content .footer-info {
-    margin-bottom: 30px;
+.team_profile .our_team_heading h1 {
+  margin: 0 0 10px;
+  font-size: 80px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #52bfc4;
 }
 
-.footer .footer-content .footer-info .logo {
-    line-height: 0;
-    margin-bottom: 25px;
+.team_profile .our_team_heading h1::after {
+  content: "";
+  width: 60px;
+  display: block;
+  margin: 10px 0;
+ /* border: 1px solid #333;*/
 }
 
-.footer .footer-content .footer-info .logo img {
-    max-height: 40px;
-    margin-right: 6px;
+.team_profile::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+ /* background: rgba(23, 23, 23, 0.7);*/
 }
 
-.footer .footer-content .footer-info .logo span {
-    font-size: 30px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #fff;
-    font-family: var(--font-secondary);
-    margin-top: 3px;
+.our_team {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
 }
 
-.footer .footer-content .footer-info p {
-    font-size: 15px;
-    margin-bottom: 0;
-    font-family: var(--font-primary);
-    color: #fff;
+.our_team .team-img img {
+  width: 100%;
+  height: 200px;
 }
 
-.footer .footer-content .social-links a {
-    font-size: 14px;
-    line-height: 0;
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    color: rgba(27, 47, 69, 0.5);
-    margin-right: 10px;
-    transition: 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-primary);
-    color: #fff;
-    border-radius: 50px;
+.our_team .team-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 25px 10px;
+  background: linear-gradient(90deg, #cfd9df 0%, #e2ebf0 100%);
+  transform: scale(0.9, 0.9) translateY(-120%);
+  transition: all 0.50s linear;
+  opacity: 80%;
 }
 
-.footer .footer-content .social-links a:hover {
-    background-color: #38618e;
+.our_team:hover .team-content {
+  transform: scale(0.9, 0.9) translateY(0%);
 }
 
-.footer .footer-content h4 {
-    font-size: 16px;
-    font-weight: bold;
-    color: #f5f7fa;
-    position: relative;
-    padding-bottom: 12px;
+.our_team .team-content .name {
+  font-size: 15px;
+  margin: 10px 0;
 }
 
-.footer .footer-content .footer-links {
-    margin-bottom: 30px;
+.our_team .team-content .name > span {
+  text-transform: capitalize;
+  display: block;
+  margin: 8px 0;
+  color: #fff;
 }
 
-.footer .footer-content .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.our_team .team-content .social_link {
+  margin: 15px 0;
+  padding: 0;
 }
 
-.footer .footer-content .footer-links ul i {
-    margin-right: 2px;
-    color: var(--color-primary);
-    font-size: 16px;
-    line-height: 0;
+.our_team .team-content .social_link li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 7px;
 }
 
-.footer .footer-content .footer-links ul li {
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
+.our_team .team-content .social_link li a {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
 }
 
-.footer .footer-content .footer-links ul li:first-child {
-    padding-top: 0;
+.row {
+  /* Styles for each row */
+  margin-bottom: 20px; /* Adjust the value as needed */
 }
 
-.footer .footer-content .footer-links ul a {
-    color: #fff;
-    transition: 0.3s;
-    display: inline-block;
-    line-height: 1;
-}
 
-.footer .footer-content .footer-links ul a:hover {
-    color: var(--color-primary);
-}
-
-.footer .footer-content .footer-contact p {
-    line-height: 26px;
-    color: #fff;
-}
-
-.footer .footer-legal {
-    background: #1b2f45;
-    padding: 30px 0;
-    width: 100%; /* Ensure the footer legal section takes full width */
-    margin: 0 auto; /* Center align the content */
-}
-
-.footer .footer-legal .copyright {
-    text-align: center;
-    color: #fff;
-}
-
-.footer .footer-legal .credits {
-    padding-top: 4px;
-    text-align: center;
-    font-size: 13px;
-    color: var(--color-secondary);
-}
-
-  /* Responsive design for mobile view */
+/* Responsive design for mobile view */
 /* Responsive design for mobile view */
 @media (max-width: 768px) {
-    .our_team .team-img img {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
-    }
-  
-    .team_profile .our_team_heading h1 {
-      font-size: 50px; /* Adjust font size for smaller screens */
-    }
-  
-    .our_team .team-content {
-      padding: 20px 5px;
-      font-size: 14px; /* Adjust font size for mobile */
-    }
+  .our_team .team-img img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
   }
+
+  .team_profile .our_team_heading h1 {
+    font-size: 50px; /* Adjust font size for smaller screens */
+  }
+
+  .our_team .team-content {
+    padding: 20px 5px;
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+}
